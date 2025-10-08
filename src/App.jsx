@@ -4,10 +4,7 @@ import ActiveSection from './components/ActiveSection'
 
 function App() {
   
-  const handleScroll = () => {
-    const section = document.getElementById('main')
-    section?.scrollIntoView({behavior: 'smooth'})
-  }
+  
   
   return (
     <Box 
@@ -21,13 +18,7 @@ function App() {
       <Hero />
       
       <ActiveSection />
-      <Button
-        position="fixed"
-        bottom="15px"
-        variant="solid"
-        left="15px"
-        onClick={handleScroll}
-      >Scroll Down</Button>
+      
       {/* <CardHolder /> */}
     </Box>
   )

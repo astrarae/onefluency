@@ -4,8 +4,8 @@ const LangCard = ( {onClickNext, img} ) => {
     return (
         <Box
             w="full"
-            h="full"
-            marginBottom={4}
+            h="400px"
+            marginBottom={12}
         >
             <Image w="100%" h="95%" marginBottom={4} src={img} rounded="md"/>
             <Button 

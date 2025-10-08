@@ -1,6 +1,7 @@
 import { Text, Box, Grid, GridItem } from "@chakra-ui/react";
 import Card from './Card'
 import { useState } from 'react'
+import PriceBox from './PriceBox'
 
 const ActiveSection = () => {
     const [activeCard, setActiveCard] = useState(0);
@@ -29,38 +30,47 @@ const ActiveSection = () => {
             w="100vw"
             h="100vh"
             display="block"
-            overflow="hidden"
+            overflowX="hidden"
             bgColor="white"
             p="4"
             
         >
             <h1>Языки<span style={{color: "#726D6D"}}>, которые преподаю</span></h1>
-            
-            <Grid
+
+            <Card 
+                onClickNext={onClickNext} 
+                img={cards[activeCard].imgSrc}    
+            />
+
+            <PriceBox marginBottom="10px"/>
+
+            <Box
+                marginLeft={1}
+            >
+                <h1>{cards[activeCard].title}</h1>
+                <Text color="black" fontSize="20px" fontWeight="500">{cards[activeCard].description}</Text>
+            </Box>
+            {/* <Grid
                 mt="4" 
                 h="full"
                 w="full"
-                templateRows="repeat(2, 1fr)"
-                templateColumns="repeat(2, 1fr)"
+                // templateRows="repeat(1, 1fr)"
+                // templateColumns="repeat(1, 1fr)"
                 gap="4"
             >
                 <GridItem>
-                    <Card 
-                        onClickNext={onClickNext} 
-                        img={cards[activeCard].imgSrc}    
-                    />
+                    
                 </GridItem>
                 <GridItem>
-                    <h1><Text fontSize="2rem">Цена:</Text> <Text fontSize="1.5rem">129.999 So'm</Text></h1>
+                    
                 </GridItem>
                 <GridItem
-                    colSpan="2"
-                    mt={8}
+                    // colSpan="2"
+                    // mt={8}
                 >
-                    <h1>{cards[activeCard].title}</h1>
-                    <Text color="black" fontSize="20px" fontWeight="500">{cards[activeCard].description}</Text>
+                    
                 </GridItem>
-            </Grid>
+            </Grid> */}
 
         </Box>
     )

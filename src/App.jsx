@@ -1,26 +1,13 @@
-import Hero from './components/Hero'
-import { Box, Button } from "@chakra-ui/react"
-import ActiveSection from './components/ActiveSection'
+import MainScreen from "./screens/MainScreen"
+import { Routes, Route } from "react-router-dom"
+import ContactsScreen from "./screens/ContactsScreen"
 
 function App() {
-  
-  
-  
   return (
-    <Box 
-      display="block" 
-      bg="white" 
-      w="full" 
-      minH="100vh"
-      minW="100vw"
-      overflow="hidden"
-    > 
-      <Hero />
-      
-      <ActiveSection />
-      
-      {/* <CardHolder /> */}
-    </Box>
+    <Routes>
+      <Route path="/" element={<MainScreen />} />
+      <Route path="/contacts" element={<ContactsScreen/>}/>  
+    </Routes>
   )
 }
 

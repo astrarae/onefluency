@@ -1,24 +1,38 @@
 import { Button, Box, Image, Group } from "@chakra-ui/react";
+import { Link } from 'react-router-dom'
 
-const LangCard = ( {onClickNext, img} ) => {
+const Card = ( {onClickNext, img, ...otherProps} ) => {
     return (
         <Box
             w="full"
             h="400px"
-            marginBottom={12}
+            {...otherProps}
         >
             <Image w="100%" h="95%" marginBottom={4} src={img} rounded="md"/>
-            <Button 
-                onClick={onClickNext}
-                w="full"
-                colorPalette="gray"
-                variant="subtle"
-            > 
-                Next 
-            </Button>
+            <Group grow>
+                <Button 
+                    onClick={onClickNext}
+                    color="black"
+                    variant="outline"
+                    
+                > 
+                    Другой курс 
+                </Button>
+
+                <Link to="/contacts">
+                    <Button
+                        colorPalette="gray"
+                        variant="subtle"
+                        
+                    >
+                        Записаться на курс
+                    </Button>
+                </Link>
+            </Group>
+            
             
         </Box>
     )
 }
 
-export default LangCard;
+export default Card;

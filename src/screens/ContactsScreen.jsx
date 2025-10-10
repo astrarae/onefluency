@@ -59,13 +59,14 @@ const ContactsScreen = () => {
                 <ContactCard title="Discord" avatar="discord.jpg" link="https://discord.gg/P5Keaq9N"/>
             </Box>
 
-            <Link to="/">
+            <Link to="/main">
                 <Button 
                     position="fixed"
                     bottom="20px"
                     left="15px"
                     rounded="50%"
-                    variant="outline"
+                    variant="plain"
+                    border="1px solid black"
                     color="black"
                     h="55px"
                     w="55px"

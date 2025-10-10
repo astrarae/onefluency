@@ -1,4 +1,4 @@
-import Hero from '../components/Hero'
+import Hero from './LandingScreen'
 import { Box } from "@chakra-ui/react"
 import ActiveSection from '../components/ActiveSection'
 
@@ -13,7 +13,7 @@ const MainScreen = () => {
             minW="100vw"
             overflow="hidden"
         > 
-            <Hero />
+            
             <ActiveSection />
         </Box>
     )

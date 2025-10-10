@@ -19,18 +19,20 @@ const Card = ( {onClickNext, img, ...otherProps} ) => {
                     <Image w="100%" h="380px" marginBottom={4} src={img} rounded="md"/>
                 </motion.div>
             </AnimatePresence>
-            <Group grow>
-                <Button 
+            <Box w="full" display="flex" justifyContent="space-between" gap={2}>
+                <Button
+                    flex={1} 
                     onClick={onClickNext}
                     color="black"
                     variant="plain"
                     border="1px solid black"
-                > 
+                    > 
                     Другой курс 
                 </Button>
 
-                <Link to="/contacts">
+                <Link style={{flex: 1}} to="/contacts">
                     <Button
+                        w="100%"
                         colorPalette="gray"
                         variant="subtle"
                         
@@ -38,7 +40,7 @@ const Card = ( {onClickNext, img, ...otherProps} ) => {
                         Записаться на курс
                     </Button>
                 </Link>
-            </Group>
+            </Box>
             
             
         </Box>

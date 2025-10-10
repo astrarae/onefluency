@@ -23,7 +23,7 @@ const ActiveSection = () => {
             bgColor="white"
             p="4"
         >
-            <h1>Языки<span style={{color: "#726D6D"}}>, которые преподаю</span></h1>
+          
 
             <Card onClickNext={onClickNext} img={cards[activeCard].imgSrc} marginBottom={12}/>
             <PriceBox marginBottom="10px"/>

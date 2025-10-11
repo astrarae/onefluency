@@ -1,17 +1,12 @@
 import { Box } from "@chakra-ui/react";
-import Card from './Card'
+import InteractiveSection from './InteractiveSection'
 import { useState } from 'react'
 import PriceBox from './PriceBox'
 import CourseDescription from './CourseDescription'
 import cards from '../info'
 
 const ActiveSection = () => {
-    const [activeCard, setActiveCard] = useState(0);
-
-    const onClickNext = () => {
-        setActiveCard(prev => (prev === 0 ? 1 : 0))
-        console.log(cards[activeCard].title);
-    }
+    const [activeImg, setActiveImg] = useState(0);
 
     return (
         <Box
@@ -23,12 +18,9 @@ const ActiveSection = () => {
             bgColor="white"
             p="4"
         >
-          
-
-            <Card onClickNext={onClickNext} img={cards[activeCard].imgSrc} marginBottom={12}/>
+            <InteractiveSection marginBottom={4} onSlideChange={e => setActiveImg(e)}/>
             <PriceBox marginBottom="10px"/>
-            <CourseDescription title={cards[activeCard].title} description={cards[activeCard].description} marginLeft={1}/>
-            
+            <CourseDescription title={cards[activeImg].title} description={cards[activeImg].description} marginLeft={1}/>
         </Box>
     )
 }

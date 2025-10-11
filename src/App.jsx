@@ -16,8 +16,6 @@ const PageWrapper = ({ children }) => {
         stiffness: 60,   // lower = softer
         damping: 15,     // higher = less bounce
       }}
-
-      
     >
       {children}
     </motion.div>

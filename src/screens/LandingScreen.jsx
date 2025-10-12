@@ -24,7 +24,13 @@ const LandingScreen = () => {
                 alignItems="center"
                 flexDirection="column"
             >
-                <h2>Learn &</h2>
+                <h2
+                    style={{
+                        color: 'black',
+                        fontSize: '60px',
+                        fontFamily: 'Monsieur La Doulaise',
+                    }}
+                >Learn &</h2>
                 <h3>DISCOVER</h3>
             </Box>
 

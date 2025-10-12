@@ -1,19 +1,36 @@
 import { Box } from "@chakra-ui/react";
+import './PriceBox.css'
+import PopupSection from "./Dialog";
+
 
 const PriceBox = ({...props}) => {
     return (
         <Box
             w="full"
-            h="125px"
+            h="auto"
             rounded="lg"
             boxShadow="1px 1px 7px rgba(0, 0, 0, 0.2)"
             p={2}
             {...props}
         >
-            <h1>
-                <span style={{fontSize:"1.5rem"}}>1 560 000 so'm</span>
-                <span style={{fontSize:"1.5rem", color: "#726D6D"}}> /мес.</span>
-            </h1>
+            <Box
+                display="flex"
+                flexDirection="row"
+                justifyContent="space-between"
+            >
+                <Box>
+                    <div className="sale-mark">
+                        1 560 000 so'm 
+                        <div className="angled-line"></div>
+                    </div>
+                    <h1>
+                        <span style={{fontSize:"1.5rem"}}>1 200 000 so'm</span>
+                        <span style={{fontSize:"1.5rem", color: "#726D6D"}}> /мес.</span>
+                    </h1>
+                </Box>
+
+                <PopupSection />
+            </Box>
 
             <Box
                 p={3}

@@ -1,0 +1,65 @@
+import { Button, Text, Dialog, Portal, Box } from "@chakra-ui/react"
+import { Info } from 'lucide-react'
+
+const PopupSection = () => {
+  return (
+    <Dialog.Root 
+        placement="center"
+        size="xs"
+    >
+      <Dialog.Trigger asChild>
+        <Button 
+            variant="plain" 
+            size="md"    
+        >
+            <Box
+                position="relative"
+                bottom="7px"
+                left="13px"
+            >
+                <Info
+                    size={32}
+                    color="black"
+                    strokeWidth={1.7}
+                />
+            </Box>
+        </Button>
+      </Dialog.Trigger>
+      <Portal>
+        <Dialog.Backdrop />
+        <Dialog.Positioner>
+          <Dialog.Content
+            bgColor="#FAFAFA"
+            color="black"
+          >
+            <Dialog.Header>
+              <Dialog.Title>
+                <Text>Подробнее</Text>
+              </Dialog.Title>
+            </Dialog.Header>
+            <Dialog.Body>
+              <ul style={{ listStyleType: "disc", marginLeft: "1.5rem" }}>
+                <li>
+                    Общее количество занятий в месяц составляет 12 уроков.
+                </li>
+                <li>
+                    График дней и часов уроков обсуждается индивидуально с каждым учеником. 
+                </li>
+                <li>
+                    Все цены выставлены в расчёте на индивидуальные занятия.
+                </li>
+              </ul>
+            </Dialog.Body>
+            <Dialog.Footer>
+              <Dialog.ActionTrigger asChild>
+                <Button w="full" variant="surface" rounded="lg">Ясно</Button>
+              </Dialog.ActionTrigger>
+            </Dialog.Footer>
+          </Dialog.Content>
+        </Dialog.Positioner>
+      </Portal>
+    </Dialog.Root>
+  )
+}
+
+export default PopupSection;

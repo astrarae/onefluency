@@ -31,4 +31,4 @@ It includes sections for:
 View the live version here: [**www.onefluency.com**](https://wwww.onefluency.com)
 
 > “Languages connect people. Technology connects opportunities.”  
-> — *Rae*
+> — *astrarae*

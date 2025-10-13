@@ -1,5 +1,14 @@
-import { Box, Button } from "@chakra-ui/react"
+import { Box, Button, Text, Image } from "@chakra-ui/react"
 import { Link } from 'react-router-dom'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination, Navigation } from 'swiper/modules'
+
+import './LandingScreen.css'
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation';
+
+
 
 const LandingScreen = () => {
 
@@ -7,18 +16,10 @@ const LandingScreen = () => {
         <Box 
             w="100vw"
             h="100vh"
-            display="flex"
             overflow="hidden"
-            bgImage="url('green-background.jpg')" 
-            bgSize="cover"                  
-            bgPosition="center"             
-            bgRepeat="no-repeat"
-            p="8"
-            justifyContent="space-between"
-            flexDirection="column"
-            
+            bgColor="white"
         >
-            <Box        
+            {/* <Box        
                 display="flex"
                 justifyContent="center"
                 alignItems="center"
@@ -32,11 +33,85 @@ const LandingScreen = () => {
                     }}
                 >Learn &</h2>
                 <h3>DISCOVER</h3>
+            </Box> */}
+            <Box
+                p={4}
+                bgColor="black"
+                w="full"
+                h="60px"
+                display="flex"
+                flexDirection="row"
+                alignItems="center"
+            >
+                <Text color="white" fontWeight={700} fontSize="12px">One Fluency</Text>
             </Box>
 
-            <Link to="/main">
-                <Button>Get Started</Button>
+            <Box
+                p={2}
+                display="flex"
+                flexDirection="column"
+                justifyContent="space-between"
+                h="93%"
+>
+                <Box>
+                    <Swiper
+                    pagination={{
+                        dynamicBullets: true,
+                    }}
+                    modules={[Pagination, Navigation]}
+                    navigation={true} 
+                    
+                    
+                    
+                >
+                    <SwiperSlide>
+                        
+                            <Image
+                                src="EnglishBanner.png"
+                                alt="English Banner"
+                                w="full"
+                                h="full"
+                                rounded={0}
+                                objectFit="none"
+                                objectPosition="center"  
+                            />
+                        
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        
+                            <Image
+                                src="KoreanBanner.png"
+                                alt="English Banner"
+                                w="full"
+                                h="full"
+                                rounded={0}
+                                objectFit="none"
+                                objectPosition="center"  
+                            />
+                        
+                    </SwiperSlide>
+                </Swiper>
+                </Box>
+            
+                <Link to="/main">
+                <Button
+                    
+                    bgColor="black"
+                    p={4}
+                    h="50px"
+                    w="full"
+                    color="white"
+                >Начать</Button>
             </Link>
+            </Box>
+
+           
+
+            
+
+            
+
+            
         </Box>
     )
 }

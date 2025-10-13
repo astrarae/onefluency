@@ -15,7 +15,7 @@ const PriceBox = ({...props}) => {
         >
             <Box
                 display="flex"
-                flexDirection="row"
+                flexDirection="row" UP
                 justifyContent="space-between"
             >
                 <Box>

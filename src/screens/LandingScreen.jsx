@@ -42,11 +42,13 @@ const LandingScreen = () => {
                 display="flex"
                 flexDirection="row"
                 alignItems="center"
+                position="absolute"
             >
                 <Text color="white" fontWeight={700} fontSize="12px">One Fluency</Text>
             </Box>
 
             <Box
+                mt={16}
                 p={2}
                 display="flex"
                 flexDirection="column"
@@ -60,12 +62,8 @@ const LandingScreen = () => {
                     }}
                     modules={[Pagination, Navigation]}
                     navigation={true} 
-                    
-                    
-                    
-                >
-                    <SwiperSlide>
-                        
+                    >
+                        <SwiperSlide>
                             <Image
                                 src="EnglishBanner.png"
                                 alt="English Banner"
@@ -76,8 +74,8 @@ const LandingScreen = () => {
                                 objectPosition="center"  
                             />
                         
-                    </SwiperSlide>
-                    <SwiperSlide>
+                        </SwiperSlide>
+                        <SwiperSlide>
                         
                             <Image
                                 src="KoreanBanner.png"
@@ -89,20 +87,22 @@ const LandingScreen = () => {
                                 objectPosition="center"  
                             />
                         
-                    </SwiperSlide>
-                </Swiper>
+                        </SwiperSlide>
+                    </Swiper>
                 </Box>
             
                 <Link to="/main">
-                <Button
-                    
-                    bgColor="black"
-                    p={4}
-                    h="50px"
-                    w="full"
-                    color="white"
-                >Начать</Button>
-            </Link>
+                    <Button
+                        mb={2}
+                        bgColor="black"
+                        p={4}
+                        h="50px"
+                        w="full"
+                        color="white"
+                    >
+                        Начать
+                    </Button>
+                </Link>
             </Box>
 
            

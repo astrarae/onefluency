@@ -5,6 +5,7 @@ import PriceBox from './PriceBox'
 import CourseDescription from './CourseDescription'
 import cards from '../info'
 
+
 const ActiveSection = () => {
     const [activeImg, setActiveImg] = useState(0);
 

@@ -1,7 +1,10 @@
-import { Button, Box, Image } from "@chakra-ui/react";
+import { Button, Box, Image, chakra } from "@chakra-ui/react";
 import { Link } from 'react-router-dom'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination } from 'swiper/modules'
+import { motion } from 'framer-motion'
+
+const MotionBox = chakra(motion.div);
 
 import 'swiper/css'
 import 'swiper/css/pagination'
@@ -40,8 +43,27 @@ const InteractiveSection = ( { onSlideChange, ...otherProps } ) => {
                     variant="subtle"
                     mt={4}
                     rounded="md"
+                    position="relative"
+                    overflow="hidden"
                 >
                     Записаться на курс
+                    <MotionBox
+                        position="absolute"
+                        top={0}
+                        left="-10%"
+                        w="8px"
+                        h="full"
+                        bgGradient="linear(to-r, transparent, white, transparent)"
+                        opacity={0.8}
+                        animate={{
+                            left: ["-10%","110%"],
+                        }}
+                        transition={{
+                            duration: 2,
+                            repeat: Infinity,
+                            ease: "linear"
+                        }}
+                    />
                 </Button>
             </Link>
 

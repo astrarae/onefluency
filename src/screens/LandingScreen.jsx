@@ -93,7 +93,7 @@ const LandingScreen = () => {
             
                 <Link to="/main">
                     <Button
-                        mb={2}
+                        mb={5}
                         bgColor="black"
                         p={4}
                         h="50px"

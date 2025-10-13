@@ -1,4 +1,4 @@
-# 🌐 Rae — Personal Tutoring Website
+# 🌐 Personal Tutoring Website
 
 This repository contains the source code for my **personal website**, built to connect with students interested in learning **foreign languages** through modern, engaging, and personalized lessons.
 

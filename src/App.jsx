@@ -2,8 +2,9 @@ import MainScreen from "./screens/MainScreen"
 import { Routes, Route, useLocation } from "react-router-dom"
 import ContactsScreen from "./screens/ContactsScreen"
 import { AnimatePresence, motion } from "framer-motion"
-import { Box } from '@chakra-ui/react'
+import { Box, Text, Image } from '@chakra-ui/react'
 import LandingScreen from './screens/LandingScreen'
+import { useState, useEffect } from 'react'
 
 const PageWrapper = ({ children }) => {
   return (
@@ -41,6 +42,42 @@ const LandingWrapper = ({ children }) => {
 
 function App() {
   const location = useLocation();
+  const [isMobile, setIsMobile] = useState(true);
+  
+  useEffect(() => {
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    const mobileCheck = /android|iphone|ipad|ipod|opera mini|iemobile|wpdesktop/i.test(userAgent);
+
+    setIsMobile(mobileCheck || window.innerWidth < 768)
+  }, [])
+
+  if (!isMobile){
+    return (
+      <Box
+        h="100vh"
+        w="100vw"
+        bgColor="black"
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        flexDirection="column"
+        gap={4}
+      >
+        <Box
+          bgColor="#1f90ff"
+          p={4}
+          w="400px"
+          h="70px"
+          rounded="md"
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+        >
+          <Text color="white" fontWeight={500}>This website is only available on mobile phones!</Text>
+        </Box>
+      </Box>
+    )
+  }
   
   return (
     <Box bgColor="white">

@@ -83,8 +83,8 @@ function App() {
     <Box bgColor="white">
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<LandingWrapper> <LandingScreen/> </LandingWrapper>}/>
-          <Route path="/main" element={<PageWrapper> <MainScreen /> </PageWrapper>} />
+          {/* <Route path="/" element={<LandingWrapper> <LandingScreen/> </LandingWrapper>}/> */}
+          <Route path="/" element={<PageWrapper> <MainScreen /> </PageWrapper>} />
           <Route path="/contacts" element={<PageWrapper> <ContactsScreen/> </PageWrapper>}/>  
         </Routes>
       </AnimatePresence>

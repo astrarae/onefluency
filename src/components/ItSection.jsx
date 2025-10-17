@@ -18,7 +18,7 @@ const ItSection = () => {
             overflowX="hidden"
             bgColor="white"
         >
-            <InteractiveSection firstSlideImageSrc={cards[0].imgSrc} secondSlideImageSrc={cards[1].imgSrc} marginBottom={4} onSlideChange={e => setActiveImg(e)}/>
+            <InteractiveSection title={cards[activeImg].title} firstSlideImageSrc={cards[0].imgSrc} secondSlideImageSrc={cards[1].imgSrc} marginBottom={4} onSlideChange={e => setActiveImg(e)}/>
             <PriceBox 
                 monthlyFullPayment={"1 800 000"} 
                 monthlyActualPayment={"1 400 000"} 
@@ -28,7 +28,7 @@ const ItSection = () => {
                 economyTotalSum={"400 000"}
             />
             <CourseDescription 
-                title={cards[activeImg].title} 
+                // title={cards[activeImg].title} 
                 description={cards[activeImg].description} 
                 marginLeft={1}
             />

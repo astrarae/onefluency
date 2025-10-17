@@ -9,7 +9,7 @@ import 'swiper/css/pagination'
 import './InteractiveSection.css'
 
 
-const InteractiveSection = ( { firstSlideImageSrc, secondSlideImageSrc, onSlideChange, ...otherProps } ) => {
+const InteractiveSection = ( { title, firstSlideImageSrc, secondSlideImageSrc, onSlideChange, ...otherProps } ) => {
     
     return (
         <Box
@@ -33,7 +33,8 @@ const InteractiveSection = ( { firstSlideImageSrc, secondSlideImageSrc, onSlideC
                 </SwiperSlide>
             </Swiper>
 
-
+            <h1>{title}</h1>
+            
             <Link style={{flex: 1}} to="/contacts"> 
                 <Button // The button that leads to contacts
                     w="full"

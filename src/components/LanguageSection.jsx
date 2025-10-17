@@ -18,7 +18,8 @@ const LanguageSection = () => {
             overflowX="hidden"
             bgColor="white"
         >
-            <InteractiveSection firstSlideImageSrc={cards[0].imgSrc} secondSlideImageSrc={cards[1].imgSrc} marginBottom={4} onSlideChange={e => setActiveImg(e)}/>
+            
+            <InteractiveSection title={cards[activeImg].title} firstSlideImageSrc={cards[0].imgSrc} secondSlideImageSrc={cards[1].imgSrc} marginBottom={4} onSlideChange={e => setActiveImg(e)}/>
             <PriceBox 
                 monthlyFullPayment={"1 560 000"} 
                 monthlyActualPayment={"1 200 000"} 
@@ -28,7 +29,7 @@ const LanguageSection = () => {
                 economyTotalSum={"360 000"}
             />
             <CourseDescription 
-                title={cards[activeImg].title} 
+                // title={cards[activeImg].title} 
                 description={cards[activeImg].description} 
                 marginLeft={1}
             />

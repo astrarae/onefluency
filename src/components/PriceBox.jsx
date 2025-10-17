@@ -11,6 +11,9 @@ const PriceBox = ({ monthlyFullPayment, monthlyActualPayment, dailyPayment, econ
             rounded="lg"
             boxShadow="1px 1px 7px rgba(0, 0, 0, 0.2)"
             p={2}
+            display="flex"
+            flexDirection="column"
+            gap={2}
             {...otherProps}
         >
             <Box // The price space
@@ -69,6 +72,7 @@ const PriceBox = ({ monthlyFullPayment, monthlyActualPayment, dailyPayment, econ
                     </span>
                 </Box>
             </Box>
+            
             
         </Box>
     )

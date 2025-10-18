@@ -1,7 +1,7 @@
 import { Button, Text, Dialog, Portal, Box , FormatNumber} from "@chakra-ui/react"
 import { Info } from 'lucide-react'
 
-const PopupSection = ({ economyPercentage, economyTotalSum }) => {
+const PopupSection = ({ currency, economyPercentage, economyTotalSum }) => {
   return (
     <Dialog.Root 
         placement="center"
@@ -49,7 +49,7 @@ const PopupSection = ({ economyPercentage, economyTotalSum }) => {
                     Все цены выставлены в расчёте на индивидуальные занятия.
                 </li>
                 <li>
-                    При оплате за весь месяц, вы экономите <span style={{fontWeight: 700}}>{economyPercentage}%</span>, что приравнивается к <span style={{fontWeight: 700}}>{economyTotalSum} so'm</span>.
+                    При оплате за весь месяц, вы экономите <span style={{fontWeight: 700}}>{economyPercentage}%</span>, что приравнивается к <span style={{fontWeight: 700}}>{economyTotalSum} {currency}</span>.
                 </li>
               </ul>
             </Dialog.Body>

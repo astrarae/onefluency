@@ -7,7 +7,7 @@
 }
 
 .angled-line{
-    width: 133px;
+    /* width: 133px; */
     border: 1.2px solid red;
     position: relative;
     bottom: 15px;

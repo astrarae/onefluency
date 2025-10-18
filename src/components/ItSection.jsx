@@ -6,7 +6,7 @@ import CourseDescription from './CourseDescription'
 import cards from '../it-courses-info'
 
 
-const ItSection = () => {
+const ItSection = ({ currentCountry }) => {
     const [activeImg, setActiveImg] = useState(0);
 
     return (
@@ -20,12 +20,13 @@ const ItSection = () => {
         >
             <InteractiveSection title={cards[activeImg].title} firstSlideImageSrc={cards[0].imgSrc} secondSlideImageSrc={cards[1].imgSrc} marginBottom={4} onSlideChange={e => setActiveImg(e)}/>
             <PriceBox 
-                monthlyFullPayment={"1 800 000"} 
-                monthlyActualPayment={"1 400 000"} 
-                dailyPayment={"150 000"} 
+                monthlyFullPayment={currentCountry == 1 ? "1 800 000" : "400 000"} 
+                monthlyActualPayment={currentCountry == 1 ? "1 400 000" : "350 000"} 
+                dailyPayment={currentCountry == 1 ? "150 000" : "35 000"}
+                currency={currentCountry == 1 ? "so'm" : "KRW"} 
                 marginBottom={4}
-                economyPercentage={"22"}
-                economyTotalSum={"400 000"}
+                economyPercentage={currentCountry == 1 ? "22" : "12.5"}
+                economyTotalSum={currentCountry == 1 ? "400 000" : "50 000"}
             />
             <CourseDescription 
                 // title={cards[activeImg].title} 

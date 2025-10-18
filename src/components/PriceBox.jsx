@@ -3,7 +3,7 @@ import './PriceBox.css'
 import PopupSection from "./Dialog";
 
 
-const PriceBox = ({ monthlyFullPayment, monthlyActualPayment, dailyPayment, economyPercentage, economyTotalSum, ...otherProps}) => {
+const PriceBox = ({ currency ,monthlyFullPayment, monthlyActualPayment, dailyPayment, economyPercentage, economyTotalSum, ...otherProps}) => {
     return (
         <Box
             w="auto"
@@ -22,18 +22,18 @@ const PriceBox = ({ monthlyFullPayment, monthlyActualPayment, dailyPayment, econ
                 justifyContent="space-between"
             >
                 <Box>
-                    <div className="sale-mark">
-                        {monthlyFullPayment} so'm 
+                    <div className="sale-mark" style={{width: "fit-content"}}>
+                        {monthlyFullPayment} {currency} 
                         <div className="angled-line"></div>
                     </div>
                     <h1>
-                        <span style={{fontSize:"1.5rem"}}>{monthlyActualPayment} so'm</span>
+                        <span style={{fontSize:"1.5rem"}}>{monthlyActualPayment} {currency}</span>
                         <span style={{fontSize:"1.5rem", color: "#726D6D"}}> /мес.</span>
                     </h1>
                 </Box>
                 
 
-                <PopupSection economyPercentage={economyPercentage} economyTotalSum={economyTotalSum} /> 
+                <PopupSection currency={currency} economyPercentage={economyPercentage} economyTotalSum={economyTotalSum} /> 
                  
             </Box>
 
@@ -68,7 +68,7 @@ const PriceBox = ({ monthlyFullPayment, monthlyActualPayment, dailyPayment, econ
                             fontWeight: "700"        
                         }}
                     >
-                        {dailyPayment} so'm
+                        {dailyPayment} {currency}
                     </span>
                 </Box>
             </Box>

@@ -15,6 +15,7 @@ const PriceBox = ({ currency ,monthlyFullPayment, monthlyActualPayment, dailyPay
             flexDirection="column"
             gap={2}
             {...otherProps}
+            m={0.5}
         >
             <Box // The price space
                 display="flex"

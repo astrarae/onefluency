@@ -1,6 +1,9 @@
 import { Box, Avatar, Text, Button } from '@chakra-ui/react'
 import { ChevronRight, ChevronLeft } from "lucide-react";
 import { Link } from 'react-router-dom'
+import ProfileCard from '../components/ProfileCard'
+
+
 
 const ContactCard = ({title, avatar, link}) => {
     return (
@@ -26,7 +29,7 @@ const ContactCard = ({title, avatar, link}) => {
                     <Avatar.Image  src={avatar}/>
                 </Avatar.Root>
 
-                <Text fontSize="1.3rem" color="black" fontWeight={500}>{title}</Text>
+                <Text fontSize="1.2rem" color="black" fontWeight={500}>{title}</Text>
             </Box>
 
             <Button onClick={() => window.open(link)}><ChevronRight size={18} strokeWidth={2}/></Button>
@@ -46,7 +49,10 @@ const ContactsScreen = () => {
             overflow="hidden"
             p={4}
         > 
-            <h1>Мои контакты</h1>
+            <ProfileCard 
+                avatarImage="avatarr.jpg"
+                backgroundImage="https://images.pexels.com/photos/1824273/pexels-photo-1824273.jpeg"
+            />
 
             <Box 
                 marginTop={4} 
@@ -66,13 +72,14 @@ const ContactsScreen = () => {
                     left="15px"
                     rounded="50%"
                     variant="plain"
-                    border="1px solid black"
-                    color="black"
+                    
+                    color="gray.400"
                     h="55px"
                     w="55px"
                     display="flex"
                     justifyContent="center"
-                    alignItems="center"    
+                    alignItems="center"
+                    boxShadow="1px 1px 7px rgba(0, 0, 0, 0.4)"    
                 >
                     <ChevronLeft size={18} strokeWidth={2} />
                 </Button>

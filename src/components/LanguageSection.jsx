@@ -14,7 +14,7 @@ const LanguageSection = ({currentCountry}) => {
             id="main"
             w="auto"
             h="auto"
-            display="block"
+            display={{ base: "block"}}
             overflowX="hidden"
             bgColor="white"
         >

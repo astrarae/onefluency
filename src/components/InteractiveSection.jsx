@@ -24,12 +24,13 @@ const InteractiveSection = ( { title, firstSlideImageSrc, secondSlideImageSrc, o
                 onSlideChange={e => onSlideChange(e.activeIndex)}
                 slidesPerView={1}
                 spaceBetween={30}
+                
             >
                 <SwiperSlide>
-                    <Image src={firstSlideImageSrc} rounded="md"/>
+                    <Image  src={firstSlideImageSrc} rounded="md"/>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Image src={secondSlideImageSrc} rounded="md"/>
+                    <Image  src={secondSlideImageSrc} rounded="md"/>
                 </SwiperSlide>
             </Swiper>
 

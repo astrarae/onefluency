@@ -1,11 +1,8 @@
-import { Box, Text, Button } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 import CountryChoice from "./CountryChoice";
 
 
-
 const Navbar = ({onClickHandle,currentCountry,...otherProps}) => {
-    
-
     return (
         <Box
             {...otherProps}
@@ -19,7 +16,6 @@ const Navbar = ({onClickHandle,currentCountry,...otherProps}) => {
         >
             <Text ml={0.5} color="black" fontWeight={700} fontSize="15px">Ваша страна: </Text>
             <CountryChoice currentCountry={currentCountry} onClickHandle={onClickHandle} />
-    
         </Box>
     )
 }

@@ -1,10 +1,11 @@
-import Hero from './LandingScreen'
-import { Box } from "@chakra-ui/react"
 import LanguageSection from '../components/LanguageSection'
 import TabsSection  from '@/components/Tabs'
 import { useState } from 'react'
 import ItSection from '../components/ItSection'
 import Navbar from '../components/Navbar'
+import { 
+    Box,     
+} from "@chakra-ui/react"
 
 
 const MainScreen = () => {
@@ -24,13 +25,21 @@ const MainScreen = () => {
     }
 
     return (
-        <Box 
-            display="block" 
-            bg="white" 
-            w="full" 
+        <Box
+            w="100vw"
+            h="100vh"
+            overflowX="hidden"
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            flexDirection="column"
+        >
+            <Box 
+            display="block"  
+            w={{base: "400px", md: "500px", lg: "600px"}}
             minH="100vh"
-            minW="100vw"
-            overflow="hidden"
+            
+            overflowX="hidden"
             p={4}
         >
             <Navbar currentCountry={currentCountry} onClickHandle={onClickHandle} mb={4}/> 
@@ -41,6 +50,8 @@ const MainScreen = () => {
                 <ItSection currentCountry={currentCountry}/>
             )}
         </Box>
+        </Box>
+        
     )
 }
 

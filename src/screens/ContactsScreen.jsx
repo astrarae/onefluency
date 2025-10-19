@@ -42,19 +42,28 @@ const ContactCard = ({title, avatar, link}) => {
 
 const ContactsScreen = () => {
     return  (
+        <Box
+            w="100vw"
+            h="100vh"
+            overflowX="hidden"
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            flexDirection="column"
+        >
+            
         <Box 
             display="block" 
             bg="white" 
-            w="full" 
+            w={{base: "400px", md: "500px", lg: "600px"}}
             minH="100vh"
-            minW="100vw"
             overflowX="hidden"
             p={4}
-        > 
+            > 
             <ProfileCard 
                 avatarImage="avatarr.jpg"
                 backgroundImage="https://images.pexels.com/photos/1824273/pexels-photo-1824273.jpeg"
-            />
+                />
 
             <Box 
                 marginTop={4} 
@@ -62,7 +71,7 @@ const ContactsScreen = () => {
                 flexDirection="column"
                 gap={4}
                 mb={8} 
-            >
+                >
                 <ContactCard title="Telegram" avatar="https://cdn.pixabay.com/photo/2021/12/27/10/50/telegram-6896827_1280.png" link="https://t.me/v4LeR4ik"/>
                 <ContactCard title="Facebook" avatar="facebook.png" link="https://www.facebook.com/profile.php?id=61554697711034"/>
                 <ContactCard title="Discord" avatar="discord.jpg" link="https://discord.gg/P5Keaq9N"/>
@@ -70,25 +79,26 @@ const ContactsScreen = () => {
 
             {/* <Link to="/">
                 <Button 
-                    position="fixed"
-                    bottom="20px"
-                    left="15px"
-                    rounded="50%"
-                    variant="plain"
-                    
-                    color="gray.400"
-                    h="55px"
-                    w="55px"
-                    display="flex"
-                    justifyContent="center"
-                    alignItems="center"
-                    boxShadow="1px 1px 7px rgba(0, 0, 0, 0.4)"
-                        
+                position="fixed"
+                bottom="20px"
+                left="15px"
+                rounded="50%"
+                variant="plain"
+                
+                color="gray.400"
+                h="55px"
+                w="55px"
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+                boxShadow="1px 1px 7px rgba(0, 0, 0, 0.4)"
+                
                 >
-                    <ChevronLeft size={18} strokeWidth={2} />
+                <ChevronLeft size={18} strokeWidth={2} />
                 </Button>
-            </Link> */}
+                </Link> */}
         </Box>
+                </Box>
     )
 }
 

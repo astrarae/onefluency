@@ -17,6 +17,8 @@ const ContactCard = ({title, avatar, link}) => {
             justifyContent="space-between"
             rounded="lg"
             gap={2}
+            as="a"
+            href={link}
         >
             <Box
                 display="flex"
@@ -32,7 +34,7 @@ const ContactCard = ({title, avatar, link}) => {
                 <Text fontSize="1.2rem" color="black" fontWeight={500}>{title}</Text>
             </Box>
 
-            <Button onClick={() => window.open(link)}><ChevronRight size={18} strokeWidth={2}/></Button>
+            <Button><ChevronRight size={18} strokeWidth={2}/></Button>
         </Box>
     )
 }

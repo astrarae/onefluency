@@ -58,7 +58,8 @@ const ContactsScreen = () => {
                 marginTop={4} 
                 display="flex"
                 flexDirection="column"
-                gap={4} 
+                gap={4}
+                mb={8} 
             >
                 <ContactCard title="Telegram" avatar="https://cdn.pixabay.com/photo/2021/12/27/10/50/telegram-6896827_1280.png" link="https://t.me/v4LeR4ik"/>
                 <ContactCard title="Facebook" avatar="facebook.png" link="https://www.facebook.com/profile.php?id=61554697711034"/>
@@ -79,7 +80,8 @@ const ContactsScreen = () => {
                     display="flex"
                     justifyContent="center"
                     alignItems="center"
-                    boxShadow="1px 1px 7px rgba(0, 0, 0, 0.4)"    
+                    boxShadow="1px 1px 7px rgba(0, 0, 0, 0.4)"
+                        
                 >
                     <ChevronLeft size={18} strokeWidth={2} />
                 </Button>

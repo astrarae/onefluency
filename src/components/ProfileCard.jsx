@@ -17,7 +17,7 @@ const ProfileCard = ( {avatarImage, backgroundImage} ) => {
                 h="150px"
                 roundedStartEnd="lg"
                 roundedStartStart="lg"
-                boxShadow="0px 4px 6px rgba(0, 0, 0, 0.1)"
+                
             />
             <Image
                 src={avatarImage}

@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion"
 import { Box, Text, Image } from '@chakra-ui/react'
 import LandingScreen from './screens/LandingScreen'
 import { useState, useEffect } from 'react'
+import NotFoundScreen from "./screens/NotFoundScreen"
 
 const PageWrapper = ({ children }) => {
   return (
@@ -85,7 +86,8 @@ function App() {
         <Routes location={location} key={location.pathname}>
           {/* <Route path="/" element={<LandingWrapper> <LandingScreen/> </LandingWrapper>}/> */}
           <Route path="/" element={<PageWrapper> <MainScreen /> </PageWrapper>} />
-          <Route path="/contacts" element={<PageWrapper> <ContactsScreen/> </PageWrapper>}/>  
+          <Route path="/contacts" element={<PageWrapper>  <ContactsScreen /> </PageWrapper>}/>  
+          <Route path="*" element={<PageWrapper>  <NotFoundScreen /> </PageWrapper>}/>
         </Routes>
       </AnimatePresence>
     </Box>

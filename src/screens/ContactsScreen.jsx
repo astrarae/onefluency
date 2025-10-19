@@ -66,7 +66,7 @@ const ContactsScreen = () => {
                 <ContactCard title="Discord" avatar="discord.jpg" link="https://discord.gg/P5Keaq9N"/>
             </Box>
 
-            <Link to="/">
+            {/* <Link to="/">
                 <Button 
                     position="fixed"
                     bottom="20px"
@@ -85,7 +85,7 @@ const ContactsScreen = () => {
                 >
                     <ChevronLeft size={18} strokeWidth={2} />
                 </Button>
-            </Link>
+            </Link> */}
         </Box>
     )
 }

@@ -46,7 +46,7 @@ const ContactsScreen = () => {
             w="full" 
             minH="100vh"
             minW="100vw"
-            overflow="hidden"
+            overflowX="hidden"
             p={4}
         > 
             <ProfileCard 

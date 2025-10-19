@@ -55,7 +55,7 @@ const ContactsScreen = () => {
         <Box 
             display="block" 
             bg="white" 
-            w={{base: "400px", md: "500px", lg: "600px"}}
+            w={{base: "100vw", md: "500px", lg: "600px"}}
             minH="100vh"
             overflowX="hidden"
             p={4}

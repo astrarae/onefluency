@@ -4,7 +4,7 @@ import { useState } from 'react'
 import PriceBox from './PriceBox'
 import CourseDescription from './CourseDescription'
 import cards from '../language-courses-info'
-
+import Footer from './Footer'
 
 const LanguageSection = ({currentCountry}) => {
     const [activeImg, setActiveImg] = useState(0);
@@ -14,8 +14,7 @@ const LanguageSection = ({currentCountry}) => {
             id="main"
             w="auto"
             h="auto"
-            display={{ base: "block"}}
-            overflowX="hidden"
+            
             bgColor="white"
         >
             
@@ -36,6 +35,8 @@ const LanguageSection = ({currentCountry}) => {
                 marginLeft={1}
                 mt={2}
             />
+
+            <Footer />
         </Box>
     )
 }

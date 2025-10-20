@@ -1,10 +1,10 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 import InteractiveSection from './InteractiveSection'
 import { useState } from 'react'
 import PriceBox from './PriceBox'
 import CourseDescription from './CourseDescription'
 import cards from '../it-courses-info'
-
+import Footer from "./Footer";
 
 const ItSection = ({ currentCountry }) => {
     const [activeImg, setActiveImg] = useState(0);
@@ -14,8 +14,7 @@ const ItSection = ({ currentCountry }) => {
             id="main"
             w="auto"
             h="auto"
-            display="block"
-            overflowX="hidden"
+            
             bgColor="white"
         >
             <InteractiveSection title={cards[activeImg].title} firstSlideImageSrc={cards[0].imgSrc} secondSlideImageSrc={cards[1].imgSrc} marginBottom={4} onSlideChange={e => setActiveImg(e)}/>
@@ -34,6 +33,7 @@ const ItSection = ({ currentCountry }) => {
                 marginLeft={1}
                 mt={2}
             />
+            <Footer />
         </Box>
     )
 }

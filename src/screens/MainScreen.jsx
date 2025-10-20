@@ -28,7 +28,7 @@ const MainScreen = () => {
         <Box
             w="100vw"
             h="100vh"
-            overflowX="hidden"
+            overflowY="auto"
             display="flex"
             justifyContent="center"
             alignItems="center"
@@ -39,7 +39,7 @@ const MainScreen = () => {
             w={{base: "100vw", md: "500px", lg: "600px"}}
             minH="100vh"
             
-            overflowX="hidden"
+            
             p={4}
         >
             <Navbar  currentCountry={currentCountry} onClickHandle={onClickHandle} mb={6}/> 

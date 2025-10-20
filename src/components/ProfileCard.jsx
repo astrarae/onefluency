@@ -1,5 +1,5 @@
 import { Box, Image, Text } from "@chakra-ui/react";
-import { Mail, Phone, FileUser } from "lucide-react";
+import { Mail, Phone, FileUser, CircleUser } from "lucide-react";
 
 const ProfileCard = ( {avatarImage, backgroundImage, children} ) => {
     return (
@@ -37,12 +37,45 @@ const ProfileCard = ( {avatarImage, backgroundImage, children} ) => {
                 display="flex"
                 flexDir="column"
                 gap={6}
+                mt={8}
             >
                 <Box
                     w="full"
                     display="flex"
                     alignItems='flex-start'
-                    mt={12}
+                    
+                    gap={4}
+                    >
+                    <CircleUser style={{marginTop: "3px"}} size={24} color="black"/>
+
+                    <Box
+                        w="full"
+                        display="flex"
+                        flexDir="column"
+                        gap={0}
+                    >
+                        <Text color="gray.400" fontSize="17px">Обо мне</Text>
+                        <Text color="black" flexWrap="wrap">
+                            <ol>
+                                <li>
+                                    Нахожусь в преподаваний двух языков полтора года. 
+                                </li>    
+                                <li>
+                                    Преподаю оба языка с большим вниманием на самого ученика и его цели.
+                                </li>
+                                <li>
+                                    Также предоставляю услуги создания личного вебсайта для вашего бизнеса или личного использования.
+                                </li>
+                                
+                            </ol>
+                        </Text>
+                    </Box>
+                </Box>
+
+                <Box
+                    w="full"
+                    display="flex"
+                    alignItems='flex-start'
                     gap={4}
                     >
                     <Mail style={{marginTop: "3px"}} size={24} color="black"/>
@@ -87,6 +120,8 @@ const ProfileCard = ( {avatarImage, backgroundImage, children} ) => {
                         {children}
                     </Box>
                 </Box>
+
+                
 
                 
             </Box>

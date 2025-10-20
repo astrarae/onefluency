@@ -1,44 +1,8 @@
-import { Box, Avatar, Text, Button } from '@chakra-ui/react'
-import { ChevronRight, ChevronLeft } from "lucide-react";
-import { Link } from 'react-router-dom'
+import { Box } from '@chakra-ui/react'
 import ProfileCard from '../components/ProfileCard'
 import Footer from '../components/Footer'
-
-
-const ContactCard = ({title, avatar, link}) => {
-    return (
-        <Box
-            w="full"
-            h="60px"
-            p={3}
-            display="flex"
-            boxShadow="1px 1px 7px rgba(0, 0, 0, 0.2)"
-            alignItems="center"
-            justifyContent="space-between"
-            rounded="lg"
-            gap={2}
-            as="a"
-            href={link}
-        >
-            <Box
-                display="flex"
-                flexDirection="row"
-                alignItems="center"
-                gap={4}
-            >
-                <Avatar.Root borderless>
-                    <Avatar.Fallback name="avatar"/>
-                    <Avatar.Image  src={avatar}/>
-                </Avatar.Root>
-
-                <Text fontSize="1.2rem" color="black" fontWeight={500}>{title}</Text>
-            </Box>
-
-            <Button><ChevronRight size={18} strokeWidth={2}/></Button>
-        </Box>
-    )
-}
-
+import CertificateCard from '../components/CertificateCard'
+import ContactCard from '../components/ContactCard'
 
 const ContactsScreen = () => {
     return  (
@@ -52,7 +16,9 @@ const ContactsScreen = () => {
             flexDirection="column"
         > 
             <Box 
-                display="block" 
+                display="flex"
+                flexDir="column"
+                alignItems="center" 
                 bg="white" 
                 w={{base: "100vw", md: "500px", lg: "600px"}}
                 minH="100vh"
@@ -62,9 +28,13 @@ const ContactsScreen = () => {
                 <ProfileCard 
                     avatarImage="avatarr.jpg"
                     backgroundImage="https://images.pexels.com/photos/1824273/pexels-photo-1824273.jpeg"
-                />
+                >
+                    <CertificateCard title="IELTS Certificate" link="https://photos.app.goo.gl/R3Ur63Xrd7Vm5xnP6" color="rgba(8, 0, 255, 0.74)"/>
+                    <CertificateCard title="TOPIK Certificate" link="https://photos.app.goo.gl/1uaFz2nF8dfxrKVR6" color="rgba(86, 0, 249, 0.56)"/>
+                </ProfileCard>
 
                 <Box 
+                    w="full"
                     marginTop={4} 
                     display="flex"
                     flexDirection="column"
@@ -76,28 +46,9 @@ const ContactsScreen = () => {
                     <ContactCard title="Discord" avatar="discord.jpg" link="https://discord.gg/P5Keaq9N"/>
                 </Box>
 
-                {/* <Link to="/">
-                    <Button 
-                    position="fixed"
-                    bottom="20px"
-                    left="15px"
-                    rounded="50%"
-                    variant="plain"
-                    
-                    color="gray.400"
-                    h="55px"
-                    w="55px"
-                    display="flex"
-                    justifyContent="center"
-                    alignItems="center"
-                    boxShadow="1px 1px 7px rgba(0, 0, 0, 0.4)"
-                    
-                    >
-                    <ChevronLeft size={18} strokeWidth={2} />
-                    </Button>
-                    </Link> */}
+                <Footer />
             </Box>
-            <Footer position="absolute" bottom="20px"/>
+            
         </Box>
     )
 }

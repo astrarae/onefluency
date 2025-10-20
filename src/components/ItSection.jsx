@@ -32,6 +32,7 @@ const ItSection = ({ currentCountry }) => {
                 // title={cards[activeImg].title} 
                 description={cards[activeImg].description} 
                 marginLeft={1}
+                mt={2}
             />
         </Box>
     )

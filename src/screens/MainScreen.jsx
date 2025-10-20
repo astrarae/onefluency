@@ -1,6 +1,6 @@
 import LanguageSection from '../components/LanguageSection'
 import TabsSection  from '@/components/Tabs'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import ItSection from '../components/ItSection'
 import Navbar from '../components/Navbar'
 import { 
@@ -42,8 +42,8 @@ const MainScreen = () => {
             overflowX="hidden"
             p={4}
         >
-            <Navbar currentCountry={currentCountry} onClickHandle={onClickHandle} mb={4}/> 
-            <TabsSection mb={4} activeTab={activeTab} languageHandler={languageHandler} itHandler={itHandler}/>
+            <Navbar  currentCountry={currentCountry} onClickHandle={onClickHandle} mb={6}/> 
+            <TabsSection mb={0} activeTab={activeTab} languageHandler={languageHandler} itHandler={itHandler}/>
             {activeTab == 1 ? (
                 <LanguageSection currentCountry={currentCountry}/>
             ) : (

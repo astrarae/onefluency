@@ -28,11 +28,13 @@ const LanguageSection = ({currentCountry}) => {
                 marginBottom={4}
                 economyPercentage={"23"}
                 economyTotalSum={currentCountry == 1 ? "360 000" : "70 000"}
+                
             />
             <CourseDescription 
                 // title={cards[activeImg].title} 
                 description={cards[activeImg].description} 
                 marginLeft={1}
+                mt={2}
             />
         </Box>
     )

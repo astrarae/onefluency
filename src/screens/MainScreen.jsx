@@ -1,8 +1,9 @@
 import LanguageSection from '../components/LanguageSection'
 import TabsSection  from '@/components/Tabs'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import ItSection from '../components/ItSection'
 import Navbar from '../components/Navbar'
+import Footer from "../components/Footer";
 import { 
     Box,     
 } from "@chakra-ui/react"
@@ -49,6 +50,7 @@ const MainScreen = () => {
             ) : (
                 <ItSection currentCountry={currentCountry}/>
             )}
+            <Footer />
         </Box>
         </Box>
         

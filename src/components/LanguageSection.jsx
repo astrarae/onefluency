@@ -4,7 +4,7 @@ import { useState } from 'react'
 import PriceBox from './PriceBox'
 import CourseDescription from './CourseDescription'
 import cards from '../language-courses-info'
-import Footer from './Footer'
+
 
 const LanguageSection = ({currentCountry}) => {
     const [activeImg, setActiveImg] = useState(0);
@@ -36,7 +36,7 @@ const LanguageSection = ({currentCountry}) => {
                 mt={2}
             />
 
-            <Footer />
+            
         </Box>
     )
 }

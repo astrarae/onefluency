@@ -4,7 +4,7 @@ import { useState } from 'react'
 import PriceBox from './PriceBox'
 import CourseDescription from './CourseDescription'
 import cards from '../it-courses-info'
-import Footer from "./Footer";
+
 
 const ItSection = ({ currentCountry }) => {
     const [activeImg, setActiveImg] = useState(0);
@@ -33,7 +33,7 @@ const ItSection = ({ currentCountry }) => {
                 marginLeft={1}
                 mt={2}
             />
-            <Footer />
+            
         </Box>
     )
 }

@@ -4,9 +4,10 @@ import {
     
 } from '@chakra-ui/react'
 
-const Footer = () => {
+const Footer = ({...otherProps}) => {
     return (
         <Box
+            {...otherProps}
             w="full"
             h="10px"
             display="flex"

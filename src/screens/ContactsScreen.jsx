@@ -29,8 +29,8 @@ const ContactsScreen = () => {
                     avatarImage="avatarr.jpg"
                     backgroundImage="https://images.pexels.com/photos/1824273/pexels-photo-1824273.jpeg"
                 >
-                    <CertificateCard title="IELTS Certificate" link="https://photos.app.goo.gl/R3Ur63Xrd7Vm5xnP6" color="rgba(8, 0, 255, 0.74)"/>
-                    <CertificateCard title="TOPIK Certificate" link="https://photos.app.goo.gl/1uaFz2nF8dfxrKVR6" color="rgba(86, 0, 249, 0.56)"/>
+                    <CertificateCard title="IELTS Certificate" link="https://photos.app.goo.gl/R3Ur63Xrd7Vm5xnP6"/>
+                    <CertificateCard title="TOPIK Certificate" link="https://photos.app.goo.gl/1uaFz2nF8dfxrKVR6"/>
                 </ProfileCard>
 
                 <Box 

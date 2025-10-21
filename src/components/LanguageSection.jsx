@@ -14,7 +14,6 @@ const LanguageSection = ({currentCountry}) => {
             id="main"
             w="auto"
             h="auto"
-            
             bgColor="white"
         >
             
@@ -27,7 +26,6 @@ const LanguageSection = ({currentCountry}) => {
                 marginBottom={4}
                 economyPercentage={"23"}
                 economyTotalSum={currentCountry == 1 ? "360 000" : "70 000"}
-                
             />
             <CourseDescription 
                 // title={cards[activeImg].title} 

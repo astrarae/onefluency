@@ -1,59 +1,83 @@
-One Fluency - Language & IT Courses 📚💻
+# One Fluency - Language & IT Courses 📚💻
+
 One Fluency is a platform designed to help users discover and learn new languages and IT skills. It provides a user-friendly interface to browse courses, select a country, and access relevant learning materials. The application uses React, Chakra UI, and other modern web technologies to deliver a smooth and engaging learning experience.
 
-🚀 Key Features
-Course Browsing: Explore a variety of language and IT courses. 🌐
-Tabbed Interface: Easily switch between language and IT course categories. 🔀
-Country Selection: Choose your country for localized content and course offerings. 🌍
-Animated Transitions: Enjoy smooth page transitions with framer-motion. ✨
-Responsive Design: The application is designed to work seamlessly on different devices. 📱💻
-Contact Information: A dedicated page to view contact details and certificates. 📧
-Error Handling: A custom "Not Found" page for invalid routes. 🚧
-Landing Page: An attractive landing page with a carousel of images. 🖼️
-🛠️ Tech Stack
-Frontend:
-React
-React Router DOM
-Chakra UI
-Framer Motion
-Swiper
-Lucide React
-Next Themes
-React Icons
-Build Tool:
-Vite
-Other:
-ESLint
-vite-tsconfig-paths
-📦 Getting Started
+## 🚀 Key Features
+
+- **Course Browsing:** Explore a variety of language and IT courses. 🌐
+- **Tabbed Interface:** Easily switch between language and IT course categories. 🔀
+- **Country Selection:** Choose your country for localized content and course offerings. 🌍
+- **Animated Transitions:** Enjoy smooth page transitions with `framer-motion`. ✨
+- **Responsive Design:** The application is designed to work seamlessly on different devices. 📱💻
+- **Contact Information:** A dedicated page to view contact details and certificates. 📧
+- **Error Handling:** A custom "Not Found" page for invalid routes. 🚧
+- **Landing Page:** An attractive landing page with a carousel of images. 🖼️
+
+## 🛠️ Tech Stack
+
+*   **Frontend:**
+    *   React
+    *   React Router DOM
+    *   Chakra UI
+    *   Framer Motion
+    *   Swiper
+    *   Lucide React
+    *   Next Themes
+    *   React Icons
+*   **Build Tool:**
+    *   Vite
+*   **Other:**
+    *   ESLint
+    *   `vite-tsconfig-paths`
+
+## 📦 Getting Started
+
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-Prerequisites
+### Prerequisites
+
 Before you begin, ensure you have the following installed:
 
-Node.js (version >= 18)
-npm or yarn
-Installation
-Clone the repository:
+*   Node.js (version >= 18)
+*   npm or yarn
 
-git clone <repository_url>
-Navigate to the project directory:
+### Installation
 
-cd <project_directory>
-Install the dependencies:
+1.  Clone the repository:
 
-npm install
-# or
-yarn install
-Running Locally
-Start the development server:
+    ```bash
+    git clone <repository_url>
+    ```
 
-npm run dev
-# or
-yarn dev
-Open your browser and navigate to http://localhost:5173 (or the port Vite provides).
+2.  Navigate to the project directory:
 
-📂 Project Structure
+    ```bash
+    cd <project_directory>
+    ```
+
+3.  Install the dependencies:
+
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
+
+### Running Locally
+
+1.  Start the development server:
+
+    ```bash
+    npm run dev
+    # or
+    yarn dev
+    ```
+
+2.  Open your browser and navigate to `http://localhost:5173` (or the port Vite provides).
+
+## 📂 Project Structure
+
+```
 one-fluency/
 ├── .eslintrc.cjs
 ├── .gitignore
@@ -92,24 +116,32 @@ one-fluency/
 ├── tsconfig.json
 ├── tsconfig.node.json
 └── vite.config.js
-📸 Screenshots
-(Add screenshots of the application here to showcase its UI and functionality.)
+```
 
-🤝 Contributing
+## 📸 Screenshots
+
+*(Add screenshots of the application here to showcase its UI and functionality.)*
+
+## 🤝 Contributing
+
 Contributions are welcome! Please follow these steps:
 
-Fork the repository.
-Create a new branch for your feature or bug fix.
-Make your changes and commit them with descriptive messages.
-Push your changes to your fork.
-Submit a pull request to the main branch of the original repository.
-📝 License
-This project is licensed under the MIT License.
+1.  Fork the repository.
+2.  Create a new branch for your feature or bug fix.
+3.  Make your changes and commit them with descriptive messages.
+4.  Push your changes to your fork.
+5.  Submit a pull request to the main branch of the original repository.
 
-📬 Contact
-If you have any questions or suggestions, feel free to contact me at your-email@example.com.
+## 📝 License
 
-💖 Thanks
+This project is licensed under the [MIT License](LICENSE).
+
+## 📬 Contact
+
+If you have any questions or suggestions, feel free to contact me at [your-email@example.com](mailto:your-email@example.com).
+
+## 💖 Thanks
+
 Thank you for checking out this project! I hope it's helpful for learning new languages and IT skills.
 
-This is written by readme.ai - Generate beautiful READMEs effortlessly.
+This is written by [readme.ai](https://readme-generator-phi.vercel.app/) - Generate beautiful READMEs effortlessly.

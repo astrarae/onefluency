@@ -1,4 +1,4 @@
-import { Button, Menu, Portal, Text } from "@chakra-ui/react"
+import { Button, Menu, Portal, Text } from "@chakra-ui/react";
 import Countries from "@/countries";
 
 const CountryChoice = ({ currentCountry, onClickHandle, ...otherProps }) => {
@@ -12,19 +12,33 @@ const CountryChoice = ({ currentCountry, onClickHandle, ...otherProps }) => {
         </Button>
       </Menu.Trigger>
       <Portal>
-        <Menu.Positioner >
-          <Menu.Content p={0} boxShadow="1px 1px 7px rgba(0, 0, 0, 0.2)" borderBottom="1px solid black" rounded="md"  bgColor="white" >
-            <Menu.Item as="button" color="black" onClick={() => onClickHandle(1)} >
+        <Menu.Positioner>
+          <Menu.Content
+            p={0}
+            boxShadow="1px 1px 7px rgba(0, 0, 0, 0.2)"
+            borderBottom="1px solid black"
+            rounded="md"
+            bgColor="white"
+          >
+            <Menu.Item
+              as="button"
+              color="black"
+              onClick={() => onClickHandle(1)}
+            >
               Узбекистан
             </Menu.Item>
-            <Menu.Item as="button" color="black" onClick={() => onClickHandle(2)}>
+            <Menu.Item
+              as="button"
+              color="black"
+              onClick={() => onClickHandle(2)}
+            >
               Южная Корея
             </Menu.Item>
           </Menu.Content>
         </Menu.Positioner>
       </Portal>
     </Menu.Root>
-  )
-}
+  );
+};
 
 export default CountryChoice;
